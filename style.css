@@ -1,0 +1,258 @@
+:root{
+--primary:#2e7cff;
+--primary-dark:#1b5ed6;
+--bg:#f8f9ff;
+--card:#ffffff;
+--text:#1a1a1a;
+--subtext:#666;
+--border:#eaeaea;
+}
+
+/* BASE */
+body{
+font-family:'Poppins', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition: background 0.3s, color 0.3s;
+}
+
+/* TRANSIÇÕES */
+.card-custom, .navbar, .btn{
+transition: all 0.3s ease;
+}
+
+.dark-mode{
+--bg:#0b0f2f;
+--text:#ffffff;
+--card:#ffffff;
+--border:#1c2a72;
+--subtext:#cbd5ff;
+}
+
+/* NAVBAR */
+.navbar{
+background: rgba(255,255,255,0.8) !important;
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+}
+
+.navbar.scrolled{
+background:#ffffff !important;
+box-shadow:0 5px 25px rgba(0,0,0,0.08);
+}
+
+/* NAVBAR DARK */
+.dark-mode .navbar{
+background: rgba(11,15,47,0.8) !important;
+border-bottom: 1px solid #1c2a72;
+}
+
+/* LINKS */
+.navbar .nav-link{
+position:relative;
+color:var(--text);
+}
+
+.navbar .nav-link:hover{
+color:var(--primary);
+}
+
+.navbar .nav-link::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:-5px;
+width:0%;
+height:2px;
+background:var(--primary);
+transition:0.3s;
+transform:translateX(-50%);
+}
+
+.navbar .nav-link:hover::after{
+width:100%;
+}
+.hero {
+background: 
+linear-gradient(to right, var(--bg) 40%, rgba(0,0,0,0.2) 65%, transparent 100%),
+url("img/bgindex.png") no-repeat right center;
+
+background-size: auto 100%; /* altura 100%, sem zoom lateral */
+background-position: right center;
+min-height: 65vh;
+display:flex;
+align-items:center;
+padding:100px 0;
+}
+
+/* RESPONSIVO HERO */
+@media(max-width:768px){
+.hero{
+text-align:center;
+background-position:center;
+background-size:cover;
+}
+}
+
+/* TEXTOS */
+.hero h1{
+font-size:52px;
+font-weight:600;
+}
+
+.hero p{
+color:var(--subtext);
+}
+
+/* BOTÕES */
+.btn-primary{
+background:var(--primary);
+border:none;
+border-radius:12px;
+}
+
+.btn-primary:hover{
+background:var(--primary-dark);
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(46,124,255,0.3);
+}
+
+.btn-primary:active{
+transform:scale(0.95);
+}
+
+.btn-outline-light{
+border:1px solid var(--primary);
+color:var(--primary);
+border-radius:12px;
+}
+
+.btn-outline-light:hover{
+background:var(--primary);
+color:white;
+}
+
+/* CARDS */
+.card-custom{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+position:relative;
+overflow:hidden;
+}
+
+.card-custom:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* DARK HOVER */
+.dark-mode .card-custom:hover{
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* BRILHO */
+.card-custom::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+transition:0.5s;
+}
+
+.card-custom:hover::before{
+left:100%;
+}
+
+/* SECTIONS */
+section{
+padding:80px 0;
+}
+
+/* LISTA */
+.list-group-item{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:12px;
+margin-bottom:10px;
+}
+
+/* PROGRESS */
+.progress{
+height:10px;
+border-radius:20px;
+background:#eaeaea;
+}
+
+.progress-bar{
+background:var(--primary);
+}
+
+/* FOOTER */
+footer{
+background:#f5f5f5;
+color:#666;
+}
+
+/* ANIMAÇÃO */
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}   
+
+/* BOTÃO */
+#themeBtn{
+position:relative;
+overflow:hidden;
+border-radius:12px;
+transition: all 0.3s ease;
+}
+
+/* GLOW */
+#themeBtn:hover{
+box-shadow:0 0 12px rgba(46,124,255,0.6);
+transform:translateY(-2px);
+}
+
+/* ATIVO */
+#themeBtn.active{
+background:#2e7cff;
+color:#fff;
+box-shadow:0 0 15px rgba(46,124,255,0.8);
+}
+
+/* ÍCONE */
+#themeBtn i{
+transition: all 0.4s ease;
+}
+
+/* ANIMAÇÃO */
+#themeBtn:hover i{
+transform:rotate(20deg) scale(1.2);
+}
+
+/* RIPPLE */
+.ripple{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.6);
+transform:scale(0);
+animation:ripple-effect 0.6s linear;
+pointer-events:none;
+}
+
+@keyframes ripple-effect{
+to{
+transform:scale(4);
+opacity:0;
+}
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Icon.png">
+    <script defer src="login.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-container login-container">
+        <form id="formulario-login" action="verificacaoLogin.php" method="POST">
+            <img src="https://images.vexels.com/media/users/3/128728/isolated/preview/4979f424070de1dbf7055d91695b74c3-icone-plano-de-cadeado-de-seguranca.png" class="logo" alt="Ícone de segurança">
+
+            <h1>LOGIN</h1>
+            <h2 style="color:#2d959c; font-size:12px; margin-top:-1px; margin-bottom:10px; text-transform:uppercase;">
+                Bem-vindo de volta, agente.<br>
+                A missão continua.
+            </h2>
+
+            <!-- LOGIN -->
+            <div class="formulario">
+                <input type="text" id="emaillogin" placeholder="Usuário ou E-mail" name="login">
+                <small></small>
+            </div>
+
+            <!-- SENHA -->
+            <div class="formulario">
+                <input type="password" id="senhalogin" placeholder="Senha" name="senha">
+                <small></small>
+            </div>
+
+            <!-- ESQUECI SENHA -->
+            <a href="/Cadastro/Cadastro.html" style="color:#2d959c; font-size:11px; text-transform:uppercase; text-align:center;">
+                <br>
+                <b>ESQUECI MINHA SENHA</b>
+            </a>
+  <br>
+            <!-- BOTÃO ENTRAR -->
+            <button type="submit" class="cta">
+                <span>ENTRAR</span>
+                <span>
+                    <svg width="66px" height="43px" viewBox="0 0 66 43">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path class="one" d="M40.15,3.89 L43.97,0.13 C44.17,-0.05 44.48,-0.05 44.67,0.13 L65.69,20.78 C66.08,21.17 66.09,21.80 65.70,22.19 L44.67,42.86 C44.48,43.05 44.17,43.05 43.97,42.86 L40.15,39.10 L56.99,21.85 L40.15,4.60 Z" fill="#FFFFFF"/>
+                            <path class="two" d="M20.15,3.89 L23.97,0.13 L45.69,20.78 L24.67,42.86 L20.15,39.10 L36.99,21.85 L20.15,4.60 Z" fill="#FFFFFF"/>
+                            <path class="three" d="M0.15,3.89 L3.97,0.13 L25.69,20.78 L4.67,42.86 L0.15,39.10 L16.99,21.85 L0.15,4.60 Z" fill="#FFFFFF"/>
+                        </g>
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Link cadastro -->
+            <a href="/Cadastro/Cadastro.html" style="color:#13777e; text-decoration:none; font-size:12px;">
+                <br>  <br>
+                Não possui conta?<br>
+                <b>CADASTRE-SE!</b>
+            </a>
+        </form>
+    </div>
+
+  
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-direita"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
